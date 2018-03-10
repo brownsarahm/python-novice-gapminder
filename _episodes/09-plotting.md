@@ -150,7 +150,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .python}
 >
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
@@ -179,10 +179,10 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ## Solution
 > >
 > > ![Correlations Solution 1](../fig/9_correlations_solution1.png)
-> > 
+> >
 > > No particular correlations can be seen between the minimum and maximum gdp values
-> > year on year. It seems the fortunes of asian countries do not rise and fall together. 
-> > 
+> > year on year. It seems the fortunes of asian countries do not rise and fall together.
+> >
 > {: .solution}
 >
 > You might note that the variability in the maximum is much higher than
@@ -197,13 +197,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .python}
 > > ## Solution
 > > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
-> > 
+> >
 > > Seems the variability in this value is due to a sharp drop after 1972.
-> > Some geopolitics at play perhaps? Given the dominance of oil producing countries, 
+> > Some geopolitics at play perhaps? Given the dominance of oil producing countries,
 > > maybe the Brent crude index would make an interesting comparison?
 > > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
 > > more notably.
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -237,6 +237,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > s - Details for this can be found in the documentation of plt.scatter.
 > > A single number or one value for each data point. Determines the size
 > > of the plotted points.
-> > 
+> >
 > {: .solution}
 {: .challenge}

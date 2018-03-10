@@ -201,7 +201,7 @@ NameError: name 'aege' is not defined
 *   Place the cursor inside the parenthesis of the function,
     hold down `shift`,
     and press `tab`.
-*   Or type a function name with a question mark after it.
+*   Or type a function name with a question mark after it and run the cell.
 
 ## Every function returns something.
 
@@ -219,6 +219,8 @@ example
 result of print is None
 ~~~
 {: .output}
+
+Excercises located in `code/ex_builtin`
 
 > ## What Happens When
 >
@@ -259,7 +261,7 @@ result of print is None
 > ~~~
 > {: .python}
 > > ## Solution
-> > 1. 
+> > 1.
 > > ~~~
 > > print(max(easy_string))
 > > ~~~
@@ -284,7 +286,7 @@ result of print is None
 > > 4
 > > ~~~
 > > {: .output}
-> > 
+> >
 > > 2. It throws a TypeError. The command is trying to run `max(4, 'tin')` and you can't compare
 > >    a string and an integer
 > {: .solution}

@@ -162,6 +162,7 @@ print(1 + int('2'))
 print(str(1) + '2')
 ~~~
 {: .python}
+
 ~~~
 3
 12
@@ -171,13 +172,14 @@ print(str(1) + '2')
 ## Can mix integers and floats freely in operations.
 
 *   Integers and floating-point numbers can be mixed in arithmetic.
-    *   Python automatically converts integers to floats as needed.
+*   Python automatically converts integers to floats as needed.
 
 ~~~
 print('half is', 1 / 2.0)
 print('three squared is', 3.0 ** 2)
 ~~~
 {: .python}
+
 ~~~
 half is 0.5
 three squared is 9.0
@@ -198,6 +200,7 @@ first = 2
 print('first is', first, 'and second is', second)
 ~~~
 {: .python}
+
 ~~~
 first is 2 and second is 5
 ~~~
@@ -206,6 +209,13 @@ first is 2 and second is 5
 *   The computer reads the value of `first` when doing the multiplication,
     creates a new value, and assigns it to `second`.
 *   After that, `second` does not remember where it came from.
+
+Load this group of excercises with:
+
+~~~
+%load code/ex_types
+~~~
+{: .python}
 
 > ## Fractions
 >
@@ -263,7 +273,7 @@ first is 2 and second is 5
 > > ## Solution
 > >
 > > The answers to the questions are:
-> > 1)Integer, since the number of days would lie between 1 and 365. 
+> > 1)Integer, since the number of days would lie between 1 and 365.
 > > 2) Floating point, since the time would represent the days, months etc in total.
 > > 3) Character string, since the serial number has a long string with alphabets and numbers.
 > > 4) Integer, since the age of a specimen cannot be represented in floating point or character.
@@ -274,36 +284,32 @@ first is 2 and second is 5
 > {: .solution}
 {: .challenge}
 
-> ## Division Types
->
-> In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-> division, and the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
->
-> ~~~
-> print('5 // 3:', 5//3)
-> print('5 / 3:', 5/3)
-> print('5 % 3:', 5%3)
-> ~~~
-> {: .python}
->
-> ~~~
-> 5 // 3: 1
-> 5 / 3: 1.6666666666666667
-> 5 % 3: 2
-> ~~~
-> {: .output}
->
-> However in Python2 (and other languages), the `/` operator between two integer types perform a floor (`//`) division. To perform a float division, we have to convert one of the integers to float.
->
-> ~~~
-> print('5 // 3:', 1)
-> print('5 / 3:', 1 )
-> print('5 / float(3):', 1.6666667 )
-> print('float(5) / 3:', 1.6666667 )
-> print('float(5 / 3):', 1.0 )
-> print('5 % 3:', 2)
-> ~~~
->
+## Division Types
+In Python 3, the `//` operator performs integer (whole-number) floor vision, the `/` operator performs floating-point
+division, and the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
+~~~
+print('5 // 3:', 5//3)
+print('5 / 3:', 5/3)
+print('5 % 3:', 5%3)
+~~~
+{: .python}
+~~~
+5 // 3: 1
+5 / 3: 1.6666666666666667
+5 % 3: 2
+~~~
+{: .output}
+However in Python2 (and other languages), the `/` operator between two integer types perform a floor (`//`) division. To perform a float division,  have to convert one of the integers to float.
+~~~
+print('5 // 3:', 1)
+print('5 / 3:', 1 )
+print('5 / float(3):', 1.6666667 )
+print('float(5) / 3:', 1.6666667 )
+print('float(5 / 3):', 1.0 )
+print('5 % 3:', 2)
+~~~
+
+> ## Division types challenge
 > If `num_subjects` is the number of subjects taking part in a study,
 > and `num_per_survey` is the number that can take part in a single survey,
 > write an expression that calculates the number of surveys needed
@@ -311,7 +317,7 @@ first is 2 and second is 5
 >
 > > ## Solution
 > > We want the minimum number of surveys that reaches everyone once, which is
-> > the rounded up value of `num_subjects / num_per_survey`. This is 
+> > the rounded up value of `num_subjects / num_per_survey`. This is
 > > equivalent to performing an integer division with `//` and adding 1.
 > > ~~~
 > > num_subjects = 600
@@ -372,12 +378,12 @@ first is 2 and second is 5
 > print("fractional string to int:", int("3.4"))
 > ~~~
 > {: .python}
-> 
+>
 > > ## Solution
 > > What do you expect this program to do? It would not be so unreasonable to expect the Python 3 `int` command to
 > > convert the string "3.4" to 3.4 and an additional type conversion to 3. After all, Python 3 performs a lot of other
 > > magic - isn't that part of its charm?
-> > 
+> >
 > > However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
 > > typecasts, you must convert it explicitly in code.
 > >
@@ -434,8 +440,8 @@ first is 2 and second is 5
 >
 > 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
 > 2.  What do you expect `1+2j + 3` to produce?
-> 3.  What do you expect '4j' to be?  What about `4 j` or `4 + j'? > 
-> 
+> 3.  What do you expect '4j' to be?  What about `4 j` or `4 + j'? >
+>
 > > ## Solution
 > >
 > > 1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
