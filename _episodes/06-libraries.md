@@ -132,6 +132,31 @@ cos(pi) is -1.0
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
+## Library Exercises won't work in a notebook
+
+The notebook wil have the libraries in question loaded into the namespace, so
+the code will evaluate if correct or not, so one of the following will need to happend in order to check these.  
+
+1. they need to be loaded and copied into separate notebooks each
+1. each piece can be put in a separate cell and saved to a file with %%writefile then each can be run from the command line.
+1. they can be run in an interactive interpretter that is closed and restated after each
+
+Example of using the writefile magic:
+in the notebook
+~~~
+%%writefile lib1.py
+from math import sin,pi
+print("sin(pi/2) =",sin(pi/2))
+~~~
+{: .python
+
+in a terminal window:
+~~~
+cd to/notebook/path
+python lib1.py
+~~~
+{: .python
+
 > ## Exploring the Math Module
 >
 > 1. What function from the `math` module can you use to calculate a square root
@@ -206,10 +231,10 @@ cos(pi) is -1.0
 
 
 > ## Jigsaw Puzzle (Parson's Problem) Programming Example
-> 
+>
 > Rearrange the following statements so that a random
-> DNA base is printed.  Not all statements may be needed.  Feel free to use/add 
-> intermediate variables. 
+> DNA base is printed.  Not all statements may be needed.  Feel free to use/add
+> intermediate variables.
 >
 > ~~~
 > bases="ACTTGCTTGAC"
@@ -284,7 +309,7 @@ cos(pi) is -1.0
 > ## There Are Many Ways To Import Libraries!
 >
 > Match the following print statements with the appropriate library calls.
-> 
+>
 > Print commands:
 >
 > 1. `print("sin(pi/2) =",sin(pi/2))`

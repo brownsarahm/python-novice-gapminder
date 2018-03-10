@@ -192,6 +192,8 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > Fill the table showing the values of the variables in this program
 > **after** each statement is executed.
 >
+> use `%load code/ex_swap` to have the students load
+>
 > ~~~
 > # Command  # Value of x   # Value of y   # Value of swap #
 > x = 1.0    #              #              #               #
@@ -212,11 +214,17 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > y = swap   # 3.0          # 1.0          # 1.0           #
 > > ~~~
 > > {: .output}
-> > 
+> >
 > > These three lines exchange the values in `x` and `y` using the `swap`
 > > variable for temporary storage. This is a fairly common programming idiom.
 >{: .solution}
 {: .challenge}
+
+The next batch of excercises are available in a single file
+
+```python
+%load code/ex_vars
+```
 
 > ## Predicting Values
 >
