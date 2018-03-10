@@ -256,7 +256,7 @@ The next batch of excercises are available in a single file
 > ## Challenge
 >
 > If you assign `a = 123`,
-> what happens if you try to get the second digit of `a`?
+> what happens if you try to get the second digit of `a` via `a[1]`?
 >
 > > ## Solution
 > > Numbers are not stored in the written representation,
