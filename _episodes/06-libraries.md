@@ -240,13 +240,23 @@ python lib1.py
 > bases="ACTTGCTTGAC"
 > import math
 > import random
-> len(bases)
-> len(bases)+1
-> math.floor(s1)
-> math.ceil(s1)
+> ___ = math.floor(s1)
+> ___ = len(bases)
 > print("random base ",bases[])
-> random.random()*l
+> ___ = random.random()*l
 > ~~~
+>
+> > ## Solution
+> > import math
+> > import random
+> >
+> > bases="ACTTGCTTGAC"
+> > l = len(bases)
+> > s1 = random.random()*l
+> > idx = math.floor(s1)
+> >
+> > print("random base ",bases[idx])
+> {: .solution}
 {: .challenge}
 
 > ## When Is Help Available?
