@@ -25,7 +25,7 @@ keypoints:
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
-    and a name in quotation marks to a variable `first_name`.
+    and a name in quotes to a variable `first_name`.
 
 ~~~
 age = 42
@@ -44,7 +44,7 @@ first_name = 'Ahmed'
 *   Python has a built-in function called `print` that prints things as text.
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
-*   To add a string to the printout, wrap the string in single or double quotations.
+*   To add a string to the printout, wrap the string in single or double quotes.
 *   The values passed to the function are called 'arguments'
 
 ~~~
@@ -80,15 +80,29 @@ NameError: name 'last_name' is not defined
 {: .error}
 
 *   The last line of an error message is usually the most informative.
-*   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
+*   We will look at error messages in detail [later]({{ page.root }}/15-scope/#reading-error-messages).
 
 > ## Variables Persist Between Cells
-> Variables defined in one cell exist in all other cells once executed,
-> so the relative location of cells in the notebook do not matter
-> (i.e., cells lower down can still affect those above).
-> Remember: Notebook cells are just a way to organize a program:
-> as far as Python is concerned,
-> all of the source code is one long set of instructions.
+>
+> Be aware that it is the order of **execution** of cells that is important in a Jupyter notebook, not the order
+> in which they appear. Python will remember **all** the code that was run previously, including any variables you have
+> defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
+> (re)run cells further up, those defined further down will still be present. As an example, create 2 cells with the
+> following content, in this order:
+>
+> ~~~
+> print(myval)
+> ~~~
+> {: .python}
+>
+> ~~~
+> myval = 1
+> ~~~
+> {: .python}
+>
+> If you execute this in order, the first cell will give an error. However, if you run the first cell **after** the second
+> cell it will print out ‘1’. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
+> clears the interpreter and runs everything from a clean slate going top to bottom.
 {: .callout}
 
 ## Variables can be used in calculations.
@@ -303,4 +317,5 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 3.  What does `thing[:high]` (without a value before the colon) do?
 > 4.  What does `thing[:]` (just a colon) do?
 > 5.  What does `thing[number:negative-number]` do?
+> 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
 {: .challenge}
